@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "4a9b97cf-8479-48a6-af76-dc0649aff99d",
+		"name": "Teknasyon - Php Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "app_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "u_id",
+							"value": "123123",
+							"type": "text"
+						},
+						{
+							"key": "os",
+							"value": "ios",
+							"type": "text"
+						},
+						{
+							"key": "lang",
+							"value": "tr",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{apiUrl}}/api/register",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_token",
+							"value": "$2y$10$cfUQOJuOXbuH5o3yk0uK3.HiB/m7gh90rvjGRLOL5JAiPs.Ylm7E.",
+							"type": "text"
+						},
+						{
+							"key": "receipt",
+							"value": "123456789012345678212525",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{apiUrl}}/purchase",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PurchaseVerificationIos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "username",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "app_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "receipt",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{apiUrl}}/purchase/verification/ios",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"purchase",
+						"verification",
+						"ios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PurchaseVerificationAndroid",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "username",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "app_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "receipt",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{apiUrl}}/purchase/verification/android",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"purchase",
+						"verification",
+						"android"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_token",
+							"value": "$2y$10$.60vTgUfsC60Y2DxQuJN6ula6mkWcE9PJ4rqHpaoIHUvOzbNz3zT6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{apiUrl}}/subscription",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"subscription"
+					]
+				},
+				"description": "as"
+			},
+			"response": []
+		},
+		{
+			"name": "3rd-party-app/send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_token",
+							"value": "$2y$10$.60vTgUfsC60Y2DxQuJN6ula6mkWcE9PJ4rqHpaoIHUvOzbNz3zT6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{apiUrl}}/subscription",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"subscription"
+					]
+				},
+				"description": "as"
+			},
+			"response": []
+		},
+		{
+			"name": "worker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiUrl}}/worker",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"worker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiUrl}}/report",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"report"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiUrl",
+			"value": "http://php-challenge.locale/api"
+		}
+	]
+}
